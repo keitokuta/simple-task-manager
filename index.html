@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>タスク管理アプリ</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>タスク管理アプリ</h1>
+            </header>
+
+            <main>
+                <section class="task-section">
+                    <h2>タスク一覧</h2>
+                    <ul id="taskList" class="task-list">
+                        <!-- ここにタスクが動的に表示されます -->
+                    </ul>
+                </section>
+
+                <section class="add-task-section">
+                    <h3>新規タスク追加</h3>
+                    <div class="input-group">
+                        <input type="text" id="taskInput" placeholder="新規タスク名を入力してください" class="task-input" />
+                        <button id="addTaskButton" class="add-button">追加</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- タスク編集ダイアログ -->
+        <div id="editDialog" class="edit-dialog" style="display: none">
+            <div class="dialog-content">
+                <h3>タスク編集</h3>
+                <div class="input-group">
+                    <input type="text" id="editTaskInput" placeholder="タスク名を入力してください" class="task-input" />
+                </div>
+                <div class="dialog-buttons">
+                    <button id="saveTaskButton" class="save-button">保存</button>
+                    <button id="cancelTaskButton" class="cancel-button">キャンセル</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
